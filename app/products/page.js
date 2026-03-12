@@ -2,7 +2,7 @@ import ProductCard from "../components/ProductCard"
 
 async function getProducts(){
 
- const res = await fetch("http://localhost:3000/api/products",{cache:"no-store"})
+fetch("/api/products",{ cache:"no-store" })
 
  return res.json()
 
