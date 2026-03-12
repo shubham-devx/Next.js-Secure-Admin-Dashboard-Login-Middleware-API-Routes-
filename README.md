@@ -1,37 +1,187 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Secure Dashboard
 
-## Getting Started
+A modern **Admin Dashboard + Product Management system** built with **Next.js App Router** and **Tailwind CSS**.
 
-First, run the development server:
+This project demonstrates how to build a **full-stack application using Next.js** with authentication, protected routes, and API routes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Features
+
+* Authentication (Login / Logout)
+* Protected Dashboard using Middleware
+* Product Management System
+* Add Product functionality
+* Dynamic Product Pages
+* API Routes (Backend inside Next.js)
+* Modern UI using Tailwind CSS
+* Clean folder structure
+
+---
+
+## Tech Stack
+
+* Next.js (App Router)
+* React
+* Tailwind CSS
+* Middleware Authentication
+* API Routes
+
+---
+
+## Project Structure
+
+```
+app
+ ├ components
+ │   ├ Navbar.js
+ │   ├ ProductCard.js
+ │   └ DashboardCard.js
+ │
+ ├ api
+ │   └ products
+ │        └ route.js
+ │
+ ├ dashboard
+ │   ├ page.js
+ │   └ add-product
+ │        └ page.js
+ │
+ ├ product
+ │   └ [id]
+ │        └ page.js
+ │
+ ├ products
+ │   └ page.js
+ │
+ ├ login
+ │   └ page.js
+ │
+ ├ layout.js
+ └ page.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Clone the repository
 
-## Learn More
+```
+git clone https://github.com/yourusername/nextjs-dashboard.git
+```
 
-To learn more about Next.js, take a look at the following resources:
+Move into the project folder
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+cd nextjs-dashboard
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Install dependencies
 
-## Deploy on Vercel
+```
+npm install
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Start development server
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-"# Next.js-Secure-Admin-Dashboard-Login-Middleware-API-Routes-" 
+```
+npm run dev
+```
+
+Open browser
+
+```
+http://localhost:3000
+```
+
+---
+
+## Login Credentials
+
+```
+Email: admin@gmail.com
+Password: 1234
+```
+
+---
+
+## API Endpoints
+
+Get all products
+
+```
+GET /api/products
+```
+
+Add new product
+
+```
+POST /api/products
+```
+
+---
+
+## Pages
+
+Home
+
+```
+/
+```
+
+Products
+
+```
+/products
+```
+
+Dashboard
+
+```
+/dashboard
+```
+
+Add Product
+
+```
+/dashboard/add-product
+```
+
+Login
+
+```
+/login
+```
+
+---
+
+## Authentication Flow
+
+1. User logs in from `/login`
+2. Cookie token is created
+3. Middleware protects `/dashboard`
+4. Unauthorized users are redirected to `/login`
+
+---
+
+## Future Improvements
+
+* Database integration (MongoDB)
+* Edit / Delete product
+* Image upload
+* Admin sidebar dashboard
+* Charts & analytics
+* Role based authentication
+
+---
+
+## Author
+
+Built by **Shubham Verma**
+
+---
+
+## License
+
+This project is open-source and free to use.
